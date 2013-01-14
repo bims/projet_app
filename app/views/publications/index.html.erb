@@ -1,0 +1,41 @@
+<h1>Listing publications</h1>
+
+<table>
+  <tr>
+    <th>Numpub</th>
+    <th>Title</th>
+    <th>Name</th>
+    <th>Years</th>
+    <th>Month</th>
+    <th>Day</th>
+    <th>Page</th>
+    <th>Note</th>
+    <th>Resume</th>
+    <th>Isconf</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @publications.each do |publication| %>
+  <tr>
+    <td><%= publication.numpub_id %></td>
+    <td><%= publication.title %></td>
+    <td><%= publication.name %></td>
+    <td><%= publication.years %></td>
+    <td><%= publication.month %></td>
+    <td><%= publication.day %></td>
+    <td><%= publication.page %></td>
+    <td><%= publication.note %></td>
+    <td><%= publication.resume %></td>
+    <td><%= publication.isconf %></td>
+    <td><%= link_to 'Show', publication %></td>
+    <td><%= link_to 'Edit', edit_publication_path(publication) %></td>
+    <td><%= link_to 'Destroy', publication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Publication', new_publication_path %>

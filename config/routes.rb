@@ -1,4 +1,10 @@
 ProjetApp::Application.routes.draw do
+  resources :publications
+
+
+  resources :authors
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

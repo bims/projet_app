@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Numpub:</b>
+  <%= @publication.numpub_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @publication.title %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @publication.name %>
+</p>
+
+<p>
+  <b>Years:</b>
+  <%= @publication.years %>
+</p>
+
+<p>
+  <b>Month:</b>
+  <%= @publication.month %>
+</p>
+
+<p>
+  <b>Day:</b>
+  <%= @publication.day %>
+</p>
+
+<p>
+  <b>Page:</b>
+  <%= @publication.page %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @publication.note %>
+</p>
+
+<p>
+  <b>Resume:</b>
+  <%= @publication.resume %>
+</p>
+
+<p>
+  <b>Isconf:</b>
+  <%= @publication.isconf %>
+</p>
+
+
+<%= link_to 'Edit', edit_publication_path(@publication) %> |
+<%= link_to 'Back', publications_path %>

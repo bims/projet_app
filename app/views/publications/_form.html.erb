@@ -1,0 +1,57 @@
+<%= form_for(@publication) do |f| %>
+  <% if @publication.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@publication.errors.count, "error") %> prohibited this publication from being saved:</h2>
+
+      <ul>
+      <% @publication.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :numpub_id %><br />
+    <%= f.number_field :numpub_id %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :years %><br />
+    <%= f.number_field :years %>
+  </div>
+  <div class="field">
+    <%= f.label :month %><br />
+    <%= f.number_field :month %>
+  </div>
+  <div class="field">
+    <%= f.label :day %><br />
+    <%= f.number_field :day %>
+  </div>
+  <div class="field">
+    <%= f.label :page %><br />
+    <%= f.number_field :page %>
+  </div>
+  <div class="field">
+    <%= f.label :note %><br />
+    <%= f.number_field :note %>
+  </div>
+  <div class="field">
+    <%= f.label :resume %><br />
+    <%= f.text_field :resume %>
+  </div>
+  <div class="field">
+    <%= f.label :isconf %><br />
+    <%= f.check_box :isconf %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
